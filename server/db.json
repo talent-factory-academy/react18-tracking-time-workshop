@@ -1,0 +1,35 @@
+{
+  "tracking": [
+    {
+      "id": 1,
+      "description": "one",
+      "date": "2022-09-08T01:09",
+      "duration": "00:30",
+      "projectId": 1
+    },
+    {
+      "id": 2,
+      "description": "two",
+      "date": "2022-09-09T01:09",
+      "duration": "02:30",
+      "projectId": 1
+    },
+    {
+      "description": "another one",
+      "date": "2022-09-10T01:09",
+      "duration": "04:15",
+      "projectId": 2,
+      "id": 3
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "ACME"
+    },
+    {
+      "id": 2,
+      "name": "ANOTHER"
+    }
+  ]
+}
