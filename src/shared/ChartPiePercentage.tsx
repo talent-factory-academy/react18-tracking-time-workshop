@@ -21,6 +21,7 @@ export function ChartPiePercentage  (props: ChartPiePercentageProps) {
     }
   }, []);
 
+
   // Populate Chart when props.data change
   useEffect(() => {
     // update chart data ( project percentages)
