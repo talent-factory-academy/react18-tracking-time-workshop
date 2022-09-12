@@ -17,6 +17,9 @@ export function useTracking() {
       axios.get<Activity[]>('http://localhost:3000/tracking?_expand=project')
     ]).then(res => {
       const [projects, activities] = res;
+      console.log(projects.data)
+      console.log(activities.data)
+
       projectsDispatch({ type: 'init', payload: projects.data })
       activitiesDispatch({ type: 'init', payload: activities.data })
     })
@@ -27,9 +30,11 @@ export function useTracking() {
     // it returns an activity without the project info (because the JsonServer API works in this way :(
     axios.post<Omit<Activity, 'project'>>('http://localhost:3000/tracking', formData)
       .then(newActivity => {
+        console.log(newActivity)
         // so we need get the current activity with `project` info too
         axios.get<Activity>(`http://localhost:3000/tracking/${newActivity.data.id}?_expand=project`)
           .then(activity => {
+            console.log(activity)
             activitiesDispatch({ type: 'add', payload: activity.data})
           })
       })
