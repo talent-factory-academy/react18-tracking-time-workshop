@@ -10,7 +10,7 @@ interface TrackingFormProps {
   onAdd: (formData: FormType) => void;
 }
 
-const initialState: FormType = { description: '', date: '', duration: 0, projectId: -1}
+const initialState: FormType = { description: '', date: '', duration: '', projectId: -1}
 
 const TrackingForm = (props: TrackingFormProps) => {
   const [formData, setFormData] = useState<FormType>(initialState);
@@ -35,7 +35,7 @@ const TrackingForm = (props: TrackingFormProps) => {
   // NEW: validators
   const isDescriptionValid = formData.description.length > 5;
   const isDateValid = formData.date !== '';
-  const isDurationValid = formData.duration !== 0;
+  const isDurationValid = formData.duration !== '';
   const isProjectValid = formData.projectId !== -1
   const isFormValid = isDescriptionValid && isDateValid && isDurationValid && isProjectValid;
 
