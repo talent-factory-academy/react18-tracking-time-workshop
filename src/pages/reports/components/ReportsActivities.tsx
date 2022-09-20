@@ -1,12 +1,12 @@
 import React from 'react';
 import { ProjectActivities } from '../hooks/useReports';
 
-interface ReactActivitiesProps {
+interface ReportsActivitiesProps {
   project: ProjectActivities;
   duration: number
 }
 
-export function ReactActivities (props: ReactActivitiesProps) {
+export function ReportsActivities (props: ReportsActivitiesProps) {
 
   const filteredProject = props.project &&
     {

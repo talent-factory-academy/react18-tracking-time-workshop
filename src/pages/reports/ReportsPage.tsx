@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ReactActivities } from './components/ReportsActivities';
+import { ReportsActivities } from './components/ReportsActivities';
 import { ReportFilters } from './components/ReportsFilters';
 import { ReportsStats } from './components/ReportsStats';
 import { useReports } from './hooks/useReports';
@@ -17,7 +17,7 @@ const ReportsPage = () => {
 
     {
       project ?
-        <ReactActivities project={project} duration={duration}/> :
+        <ReportsActivities project={project} duration={duration}/> :
         <div>You need to select a project to see reports</div>
     }
 

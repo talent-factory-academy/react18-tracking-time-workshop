@@ -74,7 +74,7 @@ function Edit (props: EditProps) {
            onChange={e => setDescription(e.currentTarget.value)}
     />
     <button type="button" onClick={props.onDelete} className="text-sm text-sky-300 ml-1">
-      Delete Activities
+      Delete Activity
     </button>
   </form>
 }

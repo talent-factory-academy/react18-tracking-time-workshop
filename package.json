@@ -8,7 +8,8 @@
     "server": "json-server --watch server/db.json",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "e2e": "cypress open"
   },
   "dependencies": {
     "axios": "^0.27.2",
